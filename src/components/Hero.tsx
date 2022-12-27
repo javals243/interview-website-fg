@@ -11,13 +11,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative h-[96vh] w-full sm:h-[55vh] md:h-[96vh]">
       <section id="hero">
-        <Image
-          src="/img/corporate.jpg"
-          alt="corporate"
-          layout="fill"
-          objectFit="cover"
-          className="bg-black opacity-60 "
-        />
+      
       </section>
     </div>
   );

@@ -55,7 +55,7 @@ export const ContactMe = () => {
   return (
     <section id="contact-me" className="">
       <div className="relative z-0 text-center">
-        <h2 className="relatve flex items-center justify-center text-3xl font-semibold text-gray-900 dark:text-gray-50">
+        <h2 className="relatve flex items-center justify-center pt-10 text-3xl font-semibold text-gray-900 dark:text-gray-50">
           Contact
         </h2>
         <span className="mx-auto mb-16 mt-2 flex h-1.5 w-[80px] items-center justify-center rounded-full bg-black" />
@@ -63,7 +63,7 @@ export const ContactMe = () => {
         <div className="" onSubmit={submitForm}>
           <Input
             type="text"
-            placeholder="Name"
+            placeholder="Nom"
             required
             value={name}
             onChange={(e: any) => setName(e.target.value)}
@@ -75,14 +75,7 @@ export const ContactMe = () => {
             value={email}
             onChange={(e: any) => setEmail(e.target.value)}
           />
-          <Input
-            type="text"
-            placeholder="Subject"
-            required
-            value={subject}
-            onChange={(e: any) => setSubject(e.target.value)}
-          />
-
+         
           <textarea
             rows={6}
             cols={10}
@@ -107,7 +100,11 @@ export const ContactMe = () => {
               alignItems: 'center',
             }}
           >
-            <Button onClick={()=> toast.success('Votre message est envoyer avec succes')}>
+            <Button
+              onClick={() =>
+                toast.success('Votre message est envoyer avec succes')
+              }
+            >
               {' '}
               {/* {submitting ? `Send...` : `Send Message`} */}
               Envoyer

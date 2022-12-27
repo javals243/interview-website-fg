@@ -17,7 +17,7 @@ function Partners() {
   return (
     <div className="App mx-[40px] mb-10">
       <div className="title">
-        <h2 className="relatve flex items-center justify-center text-3xl font-semibold text-gray-900 dark:text-gray-50">
+        <h2 className="relatve flex items-center justify-center pt-10 text-3xl font-semibold text-gray-900 dark:text-gray-50">
           Nos partenaires
         </h2>
         <span className="mx-auto mb-16 mt-2 flex h-1.5 w-[80px] items-center justify-center rounded-full bg-black" />

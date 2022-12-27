@@ -13,7 +13,7 @@ import { substringText } from '@/utils';
 
 let reversedList = projectsList.reverse();
 
-export default function Projects() {
+export default function Programmes() {
   return (
     <>
       <SEO

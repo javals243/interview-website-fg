@@ -1,11 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
+import Logo from '../images/nine.png';
 import { useRouter } from 'next/router';
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, Menu, Transition } from '@headlessui/react';
 import { ThemeToggle } from './ThemeToggle';
 import GithubIcon from '@/Icons/GithubIcon';
-import { CompactLogo, TextLogo } from '@/components/Logo';
+
+import Image from 'next/image';
 
 const navItems = [
   {
@@ -24,10 +26,7 @@ const navItems = [
     title: 'Blog',
     path: '/#contact-me',
   },
-  {
-    title: 'Programmes',
-    path: '/#contact-me',
-  },
+  
   {
     title: 'Contact',
     path: '/#contact-me',
@@ -68,139 +67,166 @@ export const Navbar = () => {
       <div className="mx-auto max-w-screen-2xl py-4 px-4 md:px-8">
         <div className="relative flex items-center">
           <Link href="/">
-            <a className="flex-none">
-              <span className="sr-only">Web site</span>
-              <span
-                className="flex items-center
+            <span
+              className="flex h-full w-[100px] items-center
               "
-              >
-                <span className="italique text-4xl font-bold text-blue-800">
-                  V
-                </span>
-                <span className=" text-3xl font-bold text-black dark:text-white ">
-                  Chihisa
-                </span>
-              </span>
-            </a>
+            >
+              <Image className="h-full w-full bg-inherit" src={Logo} alt="" />
+            </span>
           </Link>
 
           <div className="relative ml-auto items-center md:flex">
             <nav className="hidden font-semibold leading-6  dark:text-gray-200 md:block">
               <ul className="flex space-x-10">
+                <li className="relative">
+                  <Link href={'/'}>
+                    <a
+                      className={clsx(
+                        'peer transition-all duration-150 hover:text-indigo-500',
+                        router.asPath === '/' ? 'text-indigo-500' : ''
+                      )}
+                    >
+                      {'Accueil'}
+                    </a>
+                  </Link>
+                  <span
+                    className={clsx(
+                      'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-black transition-all duration-150 peer-hover:scale-x-100',
+                      router.asPath === '/' ? 'scale-x-100' : ''
+                    )}
+                  />
+                </li>
+                <li className="relative">
+                  <Link href={'/#about'}>
+                    <a
+                      className={clsx(
+                        'peer transition-all duration-150 hover:text-indigo-500',
+                        router.asPath === '/#about' ? 'text-indigo-500' : ''
+                      )}
+                    >
+                      {'Apropos'}
+                    </a>
+                  </Link>
+                  <span
+                    className={clsx(
+                      'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-black transition-all duration-150 peer-hover:scale-x-100',
+                      router.asPath === '/#about' ? 'scale-x-100' : ''
+                    )}
+                  />
+                </li>
+                <li className="relative">
+                  <Link href={'/#services'}>
+                    <a
+                      className={clsx(
+                        'peer transition-all duration-150 hover:text-indigo-500',
+                        router.asPath === '/#services' ? 'text-indigo-500' : ''
+                      )}
+                    >
+                      {'Services'}
+                    </a>
+                  </Link>
+                  <span
+                    className={clsx(
+                      'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-black transition-all duration-150 peer-hover:scale-x-100',
+                      router.asPath === '/projects/#top' ? 'scale-x-100' : ''
+                    )}
+                  />
+                </li>
+                <li className="relative">
+                  <Link href={'/projects#top'}>
+                    <a
+                      className={clsx(
+                        'peer transition-all duration-150 hover:text-indigo-500',
+                        router.asPath === '/projects#top'
+                          ? 'text-indigo-500'
+                          : ''
+                      )}
+                    >
+                      {'Blog'}
+                    </a>
+                  </Link>
+                  <span
+                    className={clsx(
+                      'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-black transition-all duration-150 peer-hover:scale-x-100',
+                      router.asPath === '/#contact-me' ? 'scale-x-100' : ''
+                    )}
+                  />
+                </li>
 
-                  <li className="relative" >
-                    <Link href={'/'}>
-                      <a
-                        className={clsx(
-                          'peer transition-all duration-150 hover:text-indigo-500',
-                          router.asPath === '/' ? 'text-indigo-500' : ''
-                        )}
-                      >
-                        {"Accueil"}
-                      </a>
-                    </Link>
-                    <span
+                <li className="relative">
+                  <Link href={'/#contact-me'}>
+                    <a
                       className={clsx(
-                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
-                        router.asPath === "/" ? 'scale-x-100' : ''
+                        'peer transition-all duration-150 hover:text-indigo-500',
+                        router.asPath === '/#contact-me'
+                          ? 'text-indigo-500'
+                          : ''
                       )}
-                    />
-                  </li>
-                   <li className="relative" >
-                    <Link href={'/#about'}>
-                      <a
-                        className={clsx(
-                          'peer transition-all duration-150 hover:text-indigo-500',
-                          router.asPath === '/#about' ? 'text-indigo-500' : ''
-                        )}
+                    >
+                      {'Contact'}
+                    </a>
+                  </Link>
+                  <span
+                    className={clsx(
+                      'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-black transition-all duration-150 peer-hover:scale-x-100',
+                      router.asPath === '/#contact-me' ? 'scale-x-100' : ''
+                    )}
+                  />
+                </li>
+                <Menu as="li" className="relative ml-3">
+                  <div>
+                    <Menu.Button className="flex text-sm   outline-none focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <button>Programmes</button>
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item
+                        onClick={() => {
+                          <Link href={'/programmes'}></Link>;
+                        }}
                       >
-                        {"Apropos"}
-                      </a>
-                    </Link>
-                    <span
-                      className={clsx(
-                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
-                        router.asPath === "/#about" ? 'scale-x-100' : ''
-                      )}
-                    />
-                  </li>
-                   <li className="relative" >
-                    <Link href={"/projects/#top"}>
-                      <a
-                        className={clsx(
-                          'peer transition-all duration-150 hover:text-indigo-500',
-                          router.asPath === "/projects/#top" ? 'text-indigo-500' : ''
+                        {({ active }) => (
+                          <a
+                            href="/programmes"
+                            className={'block px-4 py-2 text-sm text-gray-700'}
+                          >
+                            Programme 1
+                          </a>
                         )}
-                      >
-                        {"Services"}
-                      </a>
-                    </Link>
-                    <span
-                      className={clsx(
-                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
-                        router.asPath === "/projects/#top" ? 'scale-x-100' : ''
-                      )}
-                    />
-                  </li>
-                   <li className="relative" >
-                    <Link href={"/#blog"}>
-                      <a
-                        className={clsx(
-                          'peer transition-all duration-150 hover:text-indigo-500',
-                          router.asPath === "/#blog"? 'text-indigo-500' : ''
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className="block px-4 py-2 text-sm text-gray-700"
+                          >
+                            Programme 2
+                          </a>
                         )}
-                      >
-                        {"Blog"}
-                      </a>
-                    </Link>
-                    <span
-                      className={clsx(
-                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
-                        router.asPath === "/#contact-me" ? 'scale-x-100' : ''
-                      )}
-                    />
-                  </li>
-                   <li className="relative" >
-                    <Link href={"/program"}>
-                      <a
-                        className={clsx(
-                          'peer transition-all duration-150 hover:text-indigo-500',
-                          router.asPath === "/program" ? 'text-indigo-500' : ''
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={'block px-4 py-2 text-sm text-gray-700'}
+                          >
+                            Programme 3
+                          </a>
                         )}
-                      >
-                        {"Programmes"}
-                      </a>
-                    </Link>
-                    <span
-                      className={clsx(
-                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
-                        router.asPath ==="/program" ? 'scale-x-100' : ''
-                      )}
-                    />
-                  </li>
-                   <li className="relative" >
-                    <Link href={"/#contact-me"}>
-                      <a
-                        className={clsx(
-                          'peer transition-all duration-150 hover:text-indigo-500',
-                          router.asPath === "/#contact-me" ? 'text-indigo-500' : ''
-                        )}
-                      >
-                        {"Contact"}
-                      </a>
-                    </Link>
-                    <span
-                      className={clsx(
-                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
-                        router.asPath === "/#contact-me" ? 'scale-x-100' : ''
-                      )}
-                    />
-                  </li>
-             
-              
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
               </ul>
-
-             
             </nav>
 
             <div className="flex items-center space-x-4 pl-6 md:space-x-6">
@@ -210,7 +236,6 @@ export const Navbar = () => {
                 target="_blank"
                 className=""
               ></a>
-              <MenuPopOver display="flex md:hidden" />
             </div>
           </div>
         </div>
@@ -239,77 +264,7 @@ const MenuPopOver = ({ display }: { display: string }) => {
           />
         </svg>
       </button>
-      <Transition
-        show={isOpen}
-        appear
-        as={Fragment}
-        enter="transform transition ease-in-out duration-300"
-        enterFrom="-translate-x-full"
-        enterTo="translate-x-0"
-        leave="transform transition ease-in-out duration-300 delay-200"
-        leaveFrom="translate-x-0"
-        leaveTo="-translate-x-full"
-      >
-        <Dialog
-          as="div"
-          className={clsx('fixed inset-0 z-50 ', display)}
-          onClose={setIsOpen}
-        >
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300 delay-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <Dialog.Overlay className="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-gray-900/80" />
-          </Transition.Child>
-
-          <div className="fixed top-0 bottom-0 left-0 w-full max-w-xs rounded-r-2xl bg-white p-6 shadow-lg dark:bg-gray-800 ">
-            <a className="mx-auto mt-4">
-              <span className="flex items-center space-x-2">
-                <CompactLogo className="h-[32px] w-[32px]" />
-                <TextLogo className="h-[22px] w-auto fill-gray-900 dark:fill-gray-50" />
-              </span>
-            </a>
-
-            <ul className="mt-16 space-y-6">
-              {navItems.map((item) => (
-                <li className="relative" key={item.title}>
-                  <Link href={item.path}>
-                    <a
-                      onClick={() => setIsOpen(false)}
-                      className={clsx(
-                        'peer block text-lg font-semibold transition-all duration-150 hover:text-indigo-500',
-                        router.asPath === item.path ? 'text-indigo-500' : ''
-                      )}
-                    >
-                      {item.title}
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <button
-              aria-label="Close Navigation Menu"
-              className="absolute top-5 right-5"
-              onClick={() => setIsOpen(false)}
-            >
-              <svg viewBox="0 0 10 10" className="h-4 w-4" aria-hidden="true">
-                <path
-                  d="M0 0L10 10M10 0L0 10"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </Dialog>
-      </Transition>
+     
     </div>
   );
 };

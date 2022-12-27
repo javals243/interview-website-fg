@@ -11,6 +11,7 @@ import Technologies from '@/components/Technologies';
 import CarouselHome from '@/components/Carousel';
 import Services from '@/components/Services';
 import Partners from '@/components/Partners';
+import Teams from '@/components/Teams';
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       </main>
       <Services />
       {/* <Technologies /> */}
+      <Teams />
       <main className="mx-auto max-w-screen-lg px-6 sm:px-8 xl:px-12">
         <ContactMe />
       </main>

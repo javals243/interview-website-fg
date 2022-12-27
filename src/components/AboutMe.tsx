@@ -33,17 +33,15 @@ export const AboutMe = () => {
       <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-16">
         <div className="mx-auto max-w-md text-center lg:mx-0 lg:max-w-sm lg:text-left">
           <h2 className="relative text-3xl font-semibold text-gray-900 dark:text-gray-50">
-          Apropos
+            Apropos
           </h2>
-          <span className="mx-auto mt-2 block h-1.5 w-[80px] rounded-full bg-indigo-600 lg:mx-0" />
+          <span className="mx-auto mt-2 block h-1.5 w-[80px] rounded-full bg-black lg:mx-0" />
 
           <p className="mt-6 break-words text-lg">
-            {`Votre description par ici`}
+            {`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at turpis dolor. Ut sapien ipsum, condimentum et bibendum vel, suscipit eget nulla. Suspendisse potenti. Curabitur ultrices lorem eget purus placerat egestas id nec eros. Ut est lacus, fermentum sed odio vitae, pulvinar cursus odio. Donec vitae semper augue. Morbi consequat cursus magna et molestie. Mauris sit amet dolor venenatis, eleifend nisi a, tempor dolor. Ut nec magna eget neque sagittis aliquet ac at erat. In eget augue leo. Vestibulum congue quam lacus, a egestas nibh tincidunt gravida. Vivamus rutrum mi non pulvinar molestie.`}
           </p>
 
-          <div className="mt-8">
-          
-          </div>
+          <div className="mt-8"></div>
         </div>
 
         <div className="relative mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:mt-0 xl:-right-20">
@@ -53,14 +51,14 @@ export const AboutMe = () => {
               <WebDevIcon className="fill-indigo-600 dark:fill-indigo-50" />
             }
             title="Web Development"
-            subtitle="React, Javascript, Wordpress, woocommerce ..."
+            subtitle="`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at turpis dolor. Ut sapien ipsum, condimentum et bibendum vel, suscipit eget nulla. Suspendisse potenti. Curabitur ultrices lorem eget purus placerat egestas id nec eros. "
           />
           <FloatingItems
             Icon={
               <GraphicDesignIcon className="fill-indigo-600 dark:fill-indigo-50" />
             }
             title="Mobile Development"
-            subtitle="React native"
+            subtitle="`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at turpis dolor. Ut sapien ipsum, condimentum et bibendum vel, suscipit eget nulla. Suspendisse potenti. Curabitur ultrices lorem eget purus placerat egestas id nec eros. "
             className="lg:relative lg:top-1/2"
           />
           <FloatingItems
@@ -68,7 +66,7 @@ export const AboutMe = () => {
               <ConsultationIcon className="fill-indigo-600 dark:fill-indigo-50" />
             }
             title="Consultation"
-            subtitle="Help you make smarter decisions in your business ..."
+            subtitle="`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at turpis dolor. Ut sapien ipsum, condimentum et bibendum vel, suscipit eget nulla. Suspendisse potenti. Curabitur ultrices lorem eget purus placerat egestas id nec eros. "
           />
         </div>
       </div>
