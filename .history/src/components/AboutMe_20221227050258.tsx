@@ -38,7 +38,7 @@ export const AboutMe = () => {
           <span className="mx-auto mt-2 block h-1.5 w-[80px] rounded-full bg-indigo-600 lg:mx-0" />
 
           <p className="mt-6 break-words text-lg">
-            {`Votre description par ici`}
+            {`I am a full-stack engineer who creates simple websites with complex functionality. I am currently looking for new opportunities where I can help teams with my skills, If you find me suitable for your project, don't hesitate to contact me.`}
           </p>
 
           <div className="mt-8">

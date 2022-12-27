@@ -53,12 +53,12 @@ export const ContactMe = () => {
   };
 
   return (
-    <section id="contact-me" className="py-16">
+    <section id="contact-me" className="">
       <div className="relative z-0 text-center">
         <h2 className="relatve flex items-center justify-center text-3xl font-semibold text-gray-900 dark:text-gray-50">
           Contact
         </h2>
-        <span className="mx-auto mb-16 mt-2 flex h-1.5 w-[80px] items-center justify-center rounded-full bg-indigo-600" />
+        <span className="mx-auto mb-16 mt-2 flex h-1.5 w-[80px] items-center justify-center rounded-full bg-black" />
 
         <div className="" onSubmit={submitForm}>
           <Input
@@ -107,9 +107,10 @@ export const ContactMe = () => {
               alignItems: 'center',
             }}
           >
-            <Button disabled={submitting}>
+            <Button onClick={()=> toast.success('Votre message est envoyer avec succes')}>
               {' '}
-              {submitting ? `Send...` : `Send Message`}
+              {/* {submitting ? `Send...` : `Send Message`} */}
+              Envoyer
             </Button>
           </div>
         </div>

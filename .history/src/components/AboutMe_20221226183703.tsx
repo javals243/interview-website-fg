@@ -33,16 +33,30 @@ export const AboutMe = () => {
       <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-16">
         <div className="mx-auto max-w-md text-center lg:mx-0 lg:max-w-sm lg:text-left">
           <h2 className="relative text-3xl font-semibold text-gray-900 dark:text-gray-50">
-          Apropos
+            About Me
           </h2>
           <span className="mx-auto mt-2 block h-1.5 w-[80px] rounded-full bg-indigo-600 lg:mx-0" />
 
           <p className="mt-6 break-words text-lg">
-            {`Votre description par ici`}
+            {`I am a full-stack engineer who creates simple websites with complex functionality. I am currently looking for new opportunities where I can help teams with my skills, If you find me suitable for your project, don't hesitate to contact me.`}
           </p>
 
           <div className="mt-8">
-          
+            <Button
+              as="a"
+              href="https://read.cv/valere"
+              isExternal
+              onClick={() =>
+                gtag.event({
+                  action: 'view_resume',
+                  category: 'general',
+                  label: 'View Resume',
+                  value: 1,
+                })
+              }
+            >
+              View Resume
+            </Button>
           </div>
         </div>
 

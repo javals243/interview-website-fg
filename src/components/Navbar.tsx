@@ -9,18 +9,25 @@ import { CompactLogo, TextLogo } from '@/components/Logo';
 
 const navItems = [
   {
-    title: 'Home',
+    title: 'Accueil',
     path: '/',
   },
   {
-    title: 'About',
+    title: 'Apropos',
     path: '/#about',
   },
   {
-    title: 'Projects',
+    title: 'Services',
     path: '/projects/#top',
   },
-
+  {
+    title: 'Blog',
+    path: '/#contact-me',
+  },
+  {
+    title: 'Programmes',
+    path: '/#contact-me',
+  },
   {
     title: 'Contact',
     path: '/#contact-me',
@@ -28,6 +35,7 @@ const navItems = [
 ];
 
 export const Navbar = () => {
+     const [dropdownOpen, setdropdownOpen] = useState(false);
   const [isStiky, setIsSticky] = useState(false);
   const router = useRouter();
 
@@ -54,14 +62,14 @@ export const Navbar = () => {
         'fixed inset-x-0 top-0 z-40 h-16 transition-colors duration-300',
         isStiky || router.asPath !== '/'
           ? 'border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800'
-          : 'bg-transparent'
+          : 'bg-transparent text-white'
       )}
     >
       <div className="mx-auto max-w-screen-2xl py-4 px-4 md:px-8">
         <div className="relative flex items-center">
           <Link href="/">
             <a className="flex-none">
-              <span className="sr-only">Valere chihisa portfolio</span>
+              <span className="sr-only">Web site</span>
               <span
                 className="flex items-center
               "
@@ -77,42 +85,131 @@ export const Navbar = () => {
           </Link>
 
           <div className="relative ml-auto items-center md:flex">
-            <nav className="hidden font-semibold leading-6 text-gray-900 dark:text-gray-200 md:block">
+            <nav className="hidden font-semibold leading-6  dark:text-gray-200 md:block">
               <ul className="flex space-x-10">
-                {navItems.map((item) => (
-                  <li className="relative" key={item.title}>
-                    <Link href={item.path}>
+
+                  <li className="relative" >
+                    <Link href={'/'}>
                       <a
                         className={clsx(
                           'peer transition-all duration-150 hover:text-indigo-500',
-                          router.asPath === item.path ? 'text-indigo-500' : ''
+                          router.asPath === '/' ? 'text-indigo-500' : ''
                         )}
                       >
-                        {item.title}
+                        {"Accueil"}
                       </a>
                     </Link>
                     <span
                       className={clsx(
                         'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
-                        router.asPath === item.path ? 'scale-x-100' : ''
+                        router.asPath === "/" ? 'scale-x-100' : ''
                       )}
                     />
                   </li>
-                ))}
+                   <li className="relative" >
+                    <Link href={'/#about'}>
+                      <a
+                        className={clsx(
+                          'peer transition-all duration-150 hover:text-indigo-500',
+                          router.asPath === '/#about' ? 'text-indigo-500' : ''
+                        )}
+                      >
+                        {"Apropos"}
+                      </a>
+                    </Link>
+                    <span
+                      className={clsx(
+                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
+                        router.asPath === "/#about" ? 'scale-x-100' : ''
+                      )}
+                    />
+                  </li>
+                   <li className="relative" >
+                    <Link href={"/projects/#top"}>
+                      <a
+                        className={clsx(
+                          'peer transition-all duration-150 hover:text-indigo-500',
+                          router.asPath === "/projects/#top" ? 'text-indigo-500' : ''
+                        )}
+                      >
+                        {"Services"}
+                      </a>
+                    </Link>
+                    <span
+                      className={clsx(
+                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
+                        router.asPath === "/projects/#top" ? 'scale-x-100' : ''
+                      )}
+                    />
+                  </li>
+                   <li className="relative" >
+                    <Link href={"/#blog"}>
+                      <a
+                        className={clsx(
+                          'peer transition-all duration-150 hover:text-indigo-500',
+                          router.asPath === "/#blog"? 'text-indigo-500' : ''
+                        )}
+                      >
+                        {"Blog"}
+                      </a>
+                    </Link>
+                    <span
+                      className={clsx(
+                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
+                        router.asPath === "/#contact-me" ? 'scale-x-100' : ''
+                      )}
+                    />
+                  </li>
+                   <li className="relative" >
+                    <Link href={"/program"}>
+                      <a
+                        className={clsx(
+                          'peer transition-all duration-150 hover:text-indigo-500',
+                          router.asPath === "/program" ? 'text-indigo-500' : ''
+                        )}
+                      >
+                        {"Programmes"}
+                      </a>
+                    </Link>
+                    <span
+                      className={clsx(
+                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
+                        router.asPath ==="/program" ? 'scale-x-100' : ''
+                      )}
+                    />
+                  </li>
+                   <li className="relative" >
+                    <Link href={"/#contact-me"}>
+                      <a
+                        className={clsx(
+                          'peer transition-all duration-150 hover:text-indigo-500',
+                          router.asPath === "/#contact-me" ? 'text-indigo-500' : ''
+                        )}
+                      >
+                        {"Contact"}
+                      </a>
+                    </Link>
+                    <span
+                      className={clsx(
+                        'absolute inset-x-0 -bottom-0.5 h-0.5 scale-x-0 rounded-full bg-indigo-500 transition-all duration-150 peer-hover:scale-x-100',
+                        router.asPath === "/#contact-me" ? 'scale-x-100' : ''
+                      )}
+                    />
+                  </li>
+             
+              
               </ul>
+
+             
             </nav>
 
             <div className="flex items-center space-x-4 pl-6 md:space-x-6">
-              <ThemeToggle />
               <a
                 href="https://github.com/javals243"
                 rel="noopener noreferrer"
                 target="_blank"
                 className=""
-              >
-                <span className="sr-only">Valere Chihisa on GitHub</span>
-                <GithubIcon className="fill-gray-600 hover:fill-indigo-600 dark:fill-gray-400 dark:hover:fill-indigo-400" />
-              </a>
+              ></a>
               <MenuPopOver display="flex md:hidden" />
             </div>
           </div>

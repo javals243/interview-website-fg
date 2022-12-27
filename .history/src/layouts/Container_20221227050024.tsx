@@ -8,8 +8,8 @@ const Container: React.FC = ({ children }) => {
     <>
       <header>
         <Navbar />
-        <ToastContainer />
       </header>
+      <ToastContainer />
       <div id="top" className="flex h-screen flex-col justify-between">
         <main className="mx-auto mt-24 w-full max-w-screen-lg px-6 sm:mt-32 sm:px-8 xl:px-12">
           {children}

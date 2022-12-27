@@ -8,6 +8,9 @@ import Hero from '@/components/Hero';
 import SEO from '@/components/SEO';
 
 import Technologies from '@/components/Technologies';
+import CarouselHome from '@/components/Carousel';
+import Services from '@/components/Services';
+import Partners from '@/components/Partners';
 
 export default function Home() {
   return (
@@ -16,16 +19,18 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-      <Hero />
+      {/* <Hero /> */}
+      <CarouselHome />
 
       <main className="mx-auto max-w-screen-lg px-6 sm:px-8 xl:px-12">
         <AboutMe />
-        <Projects />
       </main>
-      <Technologies />
+      <Services />
+      {/* <Technologies /> */}
       <main className="mx-auto max-w-screen-lg px-6 sm:px-8 xl:px-12">
         <ContactMe />
       </main>
+      <Partners />
 
       <Footer />
     </>
