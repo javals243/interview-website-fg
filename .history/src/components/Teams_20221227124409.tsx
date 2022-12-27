@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import style from '../styles/About.module.css';
 import { dataTeams } from '../data';
 import AliceCarousel from 'react-alice-carousel';

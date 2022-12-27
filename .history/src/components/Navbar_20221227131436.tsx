@@ -196,7 +196,7 @@ export const Navbar = () => {
                       >
                         {({ active }) => (
                           <a
-                           
+                            href="/programmes"
                             className={'block px-4 py-2 text-sm text-gray-700'}
                           >
                             Programme 1
@@ -244,3 +244,27 @@ export const Navbar = () => {
   );
 };
 
+const MenuPopOver = ({ display }: { display: string }) => {
+  let [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  return (
+    <div className={display}>
+      <button aria-label="Navigation Menu" onClick={() => setIsOpen(!isOpen)}>
+        <svg
+          className="h-6 w-6 hover:stroke-indigo-600 dark:hover:stroke-indigo-400"
+          fill="none"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+     
+    </div>
+  );
+};

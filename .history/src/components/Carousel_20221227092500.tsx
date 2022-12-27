@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -33,7 +32,7 @@ const CarouselHome = () => {
             <h2>{'Services 1'}</h2>
             <h3>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the  standard dummy text
+              industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
@@ -56,7 +55,7 @@ const CarouselHome = () => {
               <h2>{'Services 2'}</h2>
               <h3>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the  standard dummy
+                industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book. It has
                 survived not only five centuries, but also the leap into
@@ -80,7 +79,7 @@ const CarouselHome = () => {
               <h2> {'Services 3'}</h2>
               <h3>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the  standard dummy
+                industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book. It has
                 survived not only five centuries, but also the leap into
@@ -104,7 +103,7 @@ const CarouselHome = () => {
               <h2>{'Services 4'}</h2>
               <h3>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the  standard dummy text
+              industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
