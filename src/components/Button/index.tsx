@@ -55,8 +55,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     // handle variants
     let btnSolid = [
-      'bg-indigo-600',
-      'hover:bg-indigo-700',
+      'bg-black',
+      'hover:bg-[#151515]',
       'text-white',
       'fill-white',
       'shadow-lg',

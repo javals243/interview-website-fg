@@ -46,6 +46,7 @@
     "rehype-slug": "^5.0.1",
     "remark-gfm": "^3.0.1",
     "swiper": "^8.0.3",
+    "taos": "^1.0.2",
     "unist-util-visit": "^4.1.0"
   },
   "devDependencies": {

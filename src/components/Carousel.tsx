@@ -4,22 +4,23 @@ import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import style from '../styles/Carousel.module.css';
 import { Carousel } from 'react-responsive-carousel';
+import { Button } from './Button';
 
 
 const CarouselHome = () => {
   
   return (
-    <div id="carousel">
+    <div id="carousel" className="">
       <Carousel
         showThumbs={false}
         showStatus={false}
         infiniteLoop
+        swipeable={false}
+        // animationHandler={'fade'}
         // emulateTouch
         autoPlay
         useKeyboardArrows
         transitionTime={1000}
-        // axis="vertical"
-        // selectedItem={1}
         width="100%"
         className={style.carousel_slider}
       >
@@ -30,19 +31,28 @@ const CarouselHome = () => {
             src={`${process.env.NEXT_PUBLIC_URL}/img/01.jpg`}
           />
           <div className={style.text_container}>
-            <h2>{'Services 1'}</h2>
-            <h3>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the  standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </h3>
+            <div className="mx-10 flex h-[600px] w-[1200px] items-center justify-around  ">
+              <div className="grid h-full w-full grid-cols-2 gap-5">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_URL}/img/05.jpg`}
+                  alt=""
+                  className="h-full w-full rounded"
+                />
+                <div className="">
+                  <h1 className="text-[60px]">SUBSCRIBE</h1>
+                  <h1 className="text-[60px]">TO THIS WEBSITE</h1>
+                  <p className="text-[20px]">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint iusto voluptas corporis adipisci, ipsam eveniet
+                    deserunt perferendis? Magni, iure quia?
+                  </p>
+                  <Button className="text-10px mt-10 " variant="solid">
+                    {' '}
+                    Subscribes
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className={style.slide_holder}>
@@ -53,19 +63,35 @@ const CarouselHome = () => {
           />
           <div className={style.textBg}>
             <div className={style.text_container}>
-              <h2>{'Services 2'}</h2>
-              <h3>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the  standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </h3>
+              <div
+                className="taos:translate-y-[200px] taos:opacity-0 delay-[300ms] duration-[600ms]"
+                data-taos-offset="300"
+              >
+                <div className={style.text_container}>
+                  <div className="mx-10 flex h-[600px] w-[1200px] items-center justify-around  ">
+                    <div className="grid h-full w-full grid-cols-2 gap-5">
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_URL}/img/10.jpg`}
+                        alt=""
+                        className="h-full w-full rounded"
+                      />
+                      <div className="">
+                        <h1 className="text-[60px]">SUBSCRIBE</h1>
+                        <h1 className="text-[60px]">TO THIS WEBSITE</h1>
+                        <p className="text-[20px]">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sint iusto voluptas corporis adipisci, ipsam
+                          eveniet deserunt perferendis? Magni, iure quia?
+                        </p>
+                        <Button className="text-10px mt-10 " variant="solid">
+                          {' '}
+                          Subscribes
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -77,19 +103,35 @@ const CarouselHome = () => {
           />
           <div className={style.textBg}>
             <div className={style.text_container}>
-              <h2> {'Services 3'}</h2>
-              <h3>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the  standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </h3>
+              <div
+                className="taos:translate-y-[200px] taos:opacity-0 delay-[300ms] duration-[600ms]"
+                data-taos-offset="300"
+              >
+                <div className={style.text_container}>
+                  <div className="mx-10 flex h-[600px] w-[1200px] items-center justify-around  ">
+                    <div className="grid h-full w-full grid-cols-2 gap-5">
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_URL}/img/09.jpg`}
+                        alt=""
+                        className="h-full w-full rounded"
+                      />
+                      <div className="">
+                        <h1 className="text-[60px]">SUBSCRIBE</h1>
+                        <h1 className="text-[60px]">TO THIS WEBSITE</h1>
+                        <p className="text-[20px]">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sint iusto voluptas corporis adipisci, ipsam
+                          eveniet deserunt perferendis? Magni, iure quia?
+                        </p>
+                        <Button className="text-10px mt-10 " variant="solid">
+                          {' '}
+                          Subscribes
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -101,19 +143,35 @@ const CarouselHome = () => {
           />
           <div className={style.textBg}>
             <div className={style.text_container}>
-              <h2>{'Services 4'}</h2>
-              <h3>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the  standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </h3>
+              <div
+                className="taos:translate-x-[200px] taos:opacity-0 delay-[300ms] duration-[600ms]"
+                data-taos-offset="400"
+              >
+                <div className={style.text_container}>
+                  <div className="mx-10 flex h-[600px] w-[1200px] items-center justify-around  ">
+                    <div className="grid h-full w-full grid-cols-2 gap-5">
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_URL}/img/07.jpg`}
+                        alt=""
+                        className="h-full w-full rounded"
+                      />
+                      <div className="">
+                        <h1 className="text-[60px]">SUBSCRIBE</h1>
+                        <h1 className="text-[60px]">TO THIS WEBSITE</h1>
+                        <p className="text-[20px]">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Sint iusto voluptas corporis adipisci, ipsam
+                          eveniet deserunt perferendis? Magni, iure quia?
+                        </p>
+                        <Button className="text-10px mt-10 " variant="solid">
+                          {' '}
+                          Subscribes
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

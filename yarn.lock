@@ -4191,6 +4191,11 @@ tailwindcss@^3.0.18:
     quick-lru "^5.1.1"
     resolve "^1.22.0"
 
+taos@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/taos/-/taos-1.0.2.tgz#a18405b29061ed9526c0bcf978bd6c29ca5a3dd2"
+  integrity sha512-wji577+Do1rKf3EMywQFbzvkGCip0v+MjDVkOaNCtqvufmXIBBoQYJbyk3RTQNr3JhDD4ECYUOX4vMCViS/8Og==
+
 tar@2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/tar/-/tar-2.2.2.tgz#0ca8848562c7299b8b446ff6a4d60cdbb23edc40"
