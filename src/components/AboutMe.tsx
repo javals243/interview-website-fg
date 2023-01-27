@@ -15,7 +15,7 @@ const FloatingItems: React.FC<{
 }> = ({ className, Icon, title, subtitle }) => {
   return (
     <Card className={clsx('px-4 py-6 text-center md:text-left', className)}>
-      <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-50 dark:bg-600 md:mx-0">
+      <span className="dark:bg-600 mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-50 md:mx-0">
         {Icon}
       </span>
 
